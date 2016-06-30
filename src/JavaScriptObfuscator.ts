@@ -3,14 +3,14 @@
 import * as esprima from 'esprima';
 import * as escodegen from 'escodegen';
 
-import { INode } from './interfaces/nodes/INode';
-import { IObfuscator } from "./interfaces/IObfuscator";
-import { IOptions } from './interfaces/IOptions';
-import { IOptionsPreset } from "./interfaces/IOptionsPreset";
+import { INode } from 'interfaces/nodes/INode';
+import { IObfuscator } from "interfaces/IObfuscator";
+import { IOptions } from 'interfaces/IOptions';
+import { IOptionsPreset } from "interfaces/IOptionsPreset";
 
-import { JavaScriptObfuscatorCLI } from "./cli/JavaScriptObfuscatorCLI";
-import { Obfuscator } from "./Obfuscator";
-import { Options } from "./Options";
+import { JavaScriptObfuscatorCLI } from 'cli/JavaScriptObfuscatorCLI';
+import { Obfuscator } from 'Obfuscator';
+import { Options } from 'Options';
 
 export class JavaScriptObfuscator {
     /**
