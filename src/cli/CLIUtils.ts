@@ -2,6 +2,8 @@ import * as fs from 'fs';
 import * as mkdirp from 'mkdirp';
 import * as path from 'path';
 
+import { ICommand } from 'commander';
+
 import { IPackageConfig } from "../interfaces/IPackageConfig";
 
 import { Utils } from "../Utils";
@@ -42,7 +44,7 @@ export class CLIUtils {
      * @param inputPath
      * @returns {string}
      */
-    public static getOutputCodePath (commands: commander.ICommand, inputPath: string): string {
+    public static getOutputCodePath (commands: ICommand, inputPath: string): string {
         let outputPath: string = (<any>commands).output;
 
         if (outputPath) {

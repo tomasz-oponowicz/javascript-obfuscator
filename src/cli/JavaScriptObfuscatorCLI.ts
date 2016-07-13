@@ -1,6 +1,6 @@
 import * as path from 'path';
 
-import { Command } from 'commander';
+import { Command, ICommand } from 'commander';
 
 import { IObfuscationResult } from "../interfaces/IObfuscationResult";
 import { IObfuscatorOptions } from "../interfaces/IObfuscatorOptions";
@@ -23,7 +23,7 @@ export class JavaScriptObfuscatorCLI {
     /**
      * @type {commander.ICommand}
      */
-    private commands: commander.ICommand;
+    private commands: ICommand;
 
     /**
      * @type {string}
