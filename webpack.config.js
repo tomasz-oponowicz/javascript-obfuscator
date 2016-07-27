@@ -28,8 +28,8 @@ module.exports = {
     },
     plugins: [
         new webpack.BannerPlugin(
+            `${getLicenseText()}\n\nrequire("source-map-support").install();\n`,
             {
-                banner: `${getLicenseText()}\n\nrequire("source-map-support").install();\n`,
                 raw: true,
                 entryOnly: false
             }
