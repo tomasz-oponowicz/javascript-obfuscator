@@ -1,6 +1,6 @@
 {
   "name": "javascript-obfuscator",
-  "version": "0.6.2-beta.0",
+  "version": "0.6.2",
   "description": "JavaScript obfuscator",
   "keywords": [
     "obfuscator",
