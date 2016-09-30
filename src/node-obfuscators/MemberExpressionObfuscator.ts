@@ -16,24 +16,24 @@ export class MemberExpressionObfuscator extends NodeObfuscator {
      * @param memberExpressionNode
      */
     public obfuscateNode (memberExpressionNode: IMemberExpressionNode): void {
-        estraverse.replace(memberExpressionNode.property, {
-            enter: (node: INode, parentNode: INode): any => {
-                if (Nodes.isLiteralNode(node)) {
-                    this.obfuscateLiteralProperty(node);
-
-                    return;
-                }
-
-                if (Nodes.isIdentifierNode(node)) {
-                    if (memberExpressionNode.computed) {
-                        return;
-                    }
-
-                    memberExpressionNode.computed = true;
-                    this.obfuscateIdentifierProperty(node);
-                }
-            }
-        });
+        // estraverse.replace(memberExpressionNode.property, {
+        //     enter: (node: INode, parentNode: INode): any => {
+        //         if (Nodes.isLiteralNode(node)) {
+        //             this.obfuscateLiteralProperty(node);
+        //
+        //             return;
+        //         }
+        //
+        //         if (Nodes.isIdentifierNode(node)) {
+        //             if (memberExpressionNode.computed) {
+        //                 return;
+        //             }
+        //
+        //             memberExpressionNode.computed = true;
+        //             this.obfuscateIdentifierProperty(node);
+        //         }
+        //     }
+        // });
     }
 
     /**
