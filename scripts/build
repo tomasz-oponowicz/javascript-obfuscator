@@ -1,5 +1,5 @@
 #!/bin/bash
 
 npm run webpack
-npm run tslint
-npm test
+# npm run tslint
+# npm test

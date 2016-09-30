@@ -8,7 +8,7 @@
     "removeComments": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "types": [
       "chai",
       "chance",
