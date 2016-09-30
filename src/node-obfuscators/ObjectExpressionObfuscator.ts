@@ -28,26 +28,26 @@ export class ObjectExpressionObfuscator extends NodeObfuscator {
      * @param objectExpressionNode
      */
     public obfuscateNode (objectExpressionNode: IObjectExpressionNode): void {
-        objectExpressionNode.properties
-            .forEach((property: IPropertyNode) => {
-                if (property.shorthand) {
-                    property.shorthand = false;
-                }
-
-                estraverse.replace(property.key, {
-                    leave: (node: INode, parentNode: INode): any => {
-                        if (Nodes.isLiteralNode(node)) {
-                            this.obfuscateLiteralPropertyKey(node);
-
-                            return;
-                        }
-
-                        if (Nodes.isIdentifierNode(node)) {
-                            this.obfuscateIdentifierPropertyKey(node);
-                        }
-                    }
-                });
-            });
+        // objectExpressionNode.properties
+        //     .forEach((property: IPropertyNode) => {
+        //         if (property.shorthand) {
+        //             property.shorthand = false;
+        //         }
+        //
+        //         estraverse.replace(property.key, {
+        //             leave: (node: INode, parentNode: INode): any => {
+        //                 if (Nodes.isLiteralNode(node)) {
+        //                     this.obfuscateLiteralPropertyKey(node);
+        //
+        //                     return;
+        //                 }
+        //
+        //                 if (Nodes.isIdentifierNode(node)) {
+        //                     this.obfuscateIdentifierPropertyKey(node);
+        //                 }
+        //             }
+        //         });
+        //     });
     }
 
     /**
