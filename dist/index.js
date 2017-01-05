@@ -3025,7 +3025,7 @@ exports.SelfDefendingTemplate = SelfDefendingTemplate;
 "use strict";
 
 function UnicodeArrayDecodeTemplate() {
-    return "\n        (function () {\n           {atobPolyfill}\n          \n            var {forLoopFunctionName} = function () {\n                var array = [];\n                \n                for (var i in {unicodeArrayName}) {\n                    array['push'](decodeURI(atob({unicodeArrayName}[i])));\n                }\n                \n                {unicodeArrayName} = array;\n            };\n            \n            {code}\n        })();\n    ";
+    return "\n        (function () {\n           {atobPolyfill}\n          \n            var {forLoopFunctionName} = function () {\n                var array = [];\n                \n                for (var i = 0; i < {unicodeArrayName}.length; i++) {\n                    array['push'](decodeURI(atob({unicodeArrayName}[i])));\n                }\n                \n                {unicodeArrayName} = array;\n            };\n            \n            {code}\n        })();\n    ";
 }
 exports.UnicodeArrayDecodeTemplate = UnicodeArrayDecodeTemplate;
 

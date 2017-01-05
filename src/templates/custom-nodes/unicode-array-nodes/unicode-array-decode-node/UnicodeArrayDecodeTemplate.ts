@@ -9,7 +9,7 @@ export function UnicodeArrayDecodeTemplate (): string {
             var {forLoopFunctionName} = function () {
                 var array = [];
                 
-                for (var i in {unicodeArrayName}) {
+                for (var i = 0; i < {unicodeArrayName}.length; i++) {
                     array['push'](decodeURI(atob({unicodeArrayName}[i])));
                 }
                 
